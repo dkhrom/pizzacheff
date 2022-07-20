@@ -21,9 +21,11 @@
             <a class="navbar__nav-logo" href="./index.html">
                 <img src="./images/logo.png" alt="Logo">
             </a>
-            <button class="navbar__nav-toggler-btn" type="button">
+            
+            <div class="navbar__nav-toggler-btn">
                 <span class="navbar__nav-toggler-icon"></span>
-            </button>
+            </div>
+
             <div class="navbar__nav-collapse">
                 <ul class="navbar__navbar-nav">
                     <li class="navbar__nav-item">
@@ -135,7 +137,7 @@
             </div>
             <div class="products-list__content">
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/1.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/1.png" alt="" />
                     </a>
@@ -146,7 +148,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/2.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/2.png" alt="" />
                     </a>
@@ -157,7 +159,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/3.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/3.png" alt="" />
                     </a>
@@ -168,7 +170,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/4.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/4.png" alt="" />
                     </a>
@@ -179,7 +181,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/5.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/5.png" alt="" />
                     </a>
@@ -190,7 +192,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/6.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/6.png" alt="" />
                     </a>
@@ -201,7 +203,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/7.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/7.png" alt="" />
                     </a>
@@ -212,7 +214,7 @@
                     <button type="button" class="item-btn">В корзину</button>
                 </div>
                 <div class="products-list__item">
-                    <a href="./images/main-products/product_zoom_in.png" class="lightzoom cover-link">
+                    <a href="./images/main-products/8.png" class="lightzoom cover-link">
                         <span class="zoom"></span>
                         <img src="./images/main-products/8.png" alt="" />
                     </a>
@@ -243,9 +245,10 @@
                     <div id="results"></div>
 
                     <form class="cta__form" id="cta-form" onsubmit="call()">
-                        <input type="text" name="first_name" placeholder="Ваше имя" required>
-                        <input type="text" name="address" placeholder="Адрес доставки" required>
-                        <input type="tel" name="phone" placeholder="Телефон" minlength="5" maxlength="18" required>
+                        <input type="text" name="first_name" id="id_input" placeholder="Ваше имя" 
+                        oninput="this.value = this.value.replace(/\./g, '')" required>
+                        <input type="text" name="address" id="id_input" placeholder="Адрес доставки" required>
+                        <input type="tel" name="phone" class="phone-input" placeholder="Телефон" required>
     
                         <button type="submit">Оформить заказ</button>
                     </form>
