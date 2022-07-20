@@ -241,15 +241,15 @@
                     <div id="results"></div>
 
                     <form class="cta__form" id="cta-form" onsubmit="call()">
-                        <input type="text" name="first_name" placeholder="Ваше имя">
-                        <input type="text" name="address" placeholder="Адрес доставки">
-                        <input type="text" name="phone" placeholder="Телефон">
+                        <input type="text" name="first_name" placeholder="Ваше имя" required>
+                        <input type="text" name="address" placeholder="Адрес доставки" required>
+                        <input type="tel" name="phone" placeholder="Телефон" minlength="5" maxlength="18" required>
     
                         <button type="submit">Оформить заказ</button>
                     </form>
                 </div>
-                <div class="cta__container-item">
-                    <img src="./images/cta__cover.png" class="cta__cover" alt="">
+                <div class="cta__container-item cta__cover">
+                    <img src="./images/cta__cover.png" class="cta__cover-img" alt="">
                 </div>
             </div>
         </div>
