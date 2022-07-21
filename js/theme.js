@@ -40,9 +40,7 @@ $(function () {
             return false;
         }
     });
-	$('.submit_btn').on('click', function() {
-		$(this).closest('form').get(0).reset();
-	});
+
 });
 
 
