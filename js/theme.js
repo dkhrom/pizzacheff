@@ -33,13 +33,16 @@ $(function () {
             $("input#name").focus();
             return false;
         }
-        var email = $("input#address").val();
-        if (email == "") {
+        var address = $("input#address").val();
+        if (address == "") {
             $("label#address_error").show();
             $("input#address").focus();
             return false;
         }
     });
+	$('.submit_btn').on('click', function() {
+		$(this).closest('form').get(0).reset();
+	});
 });
 
 
