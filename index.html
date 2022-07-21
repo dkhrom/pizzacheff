@@ -251,6 +251,13 @@
         </div>
     </section>
 
+    <div class="modal">
+        <div class="modal-content">
+            <p>Ваша заявка успешно отправлена!</p>
+            <a class="modal-close" href="#">Закрыть</a>
+        </div>
+    </div>
+
     <script src="./lightzoom/lightzoom.js"></script>
     <script src="./js/theme.js"></script>
 
@@ -259,7 +266,7 @@
            e.preventDefault();
             var form_data = $(this).serialize();
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: "./index.html",
                 data: form_data
             });
