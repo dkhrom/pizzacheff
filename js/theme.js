@@ -1,5 +1,46 @@
-// LightZoom
+// Nav - Menu
+$(function() {
+    var pull = $('#pull');
+        menu = $('nav ul');
+        menuHeight  = menu.height();
+
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+
+    $(window).resize(function(){
+        var w = $(window).width();
+        if(w > 320 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+});
+
+
+// LightZoom - Products
 jQuery('.lightzoom').lightzoom({ speed: 400, viewTitle: true });
+
+
+// CTA Form - Check inputs
+$(function () {
+    $('.error').hide();
+    $(".submit_btn").click(function () {
+        $('.error').hide();
+        var name = $("input#name").val();
+        if (name == "") {
+            $("label#name_error").show();
+            $("input#name").focus();
+            return false;
+        }
+        var email = $("input#address").val();
+        if (email == "") {
+            $("label#address_error").show();
+            $("input#address").focus();
+            return false;
+        }
+    });
+});
 
 
 // CTA Form - Phone Mask
