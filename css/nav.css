@@ -1,0 +1,113 @@
+/* navbar */
+.navbar:before,
+.navbar:after {
+    content: " ";
+    display: table;
+}
+.navbar:after {
+    clear: both;
+}
+
+.navbar {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    box-shadow: 0 2px 8px #00000026;
+}
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__logo img {
+    width: 130px;
+    height: auto;
+}
+.navbar__logo img:hover {
+    transition: all .4s;
+    transform: scale(1.02);
+}
+
+.navbar ul {
+    padding: 0;
+}
+.navbar li {
+    display: inline;
+}
+.navbar .smart-menu {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+.navbar li a {
+    color: var(--parent_orange);
+    font-weight: 500;
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+.navbar li a:hover,
+.navbar li a:active {
+    transition: all .4s;
+    color: #382400;
+    background-color: var(--orange);
+    border-radius: 50px;
+}
+
+.navbar a#pull {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar ul {
+        width: 100%;
+        display: block;
+    }
+    .navbar li {
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 681px) {
+    .navbar ul {
+        display: none;
+        width: 100%;
+        position: fixed;
+        top: 4.7rem;
+        left: 0;
+        background-color: #ebab30;
+        z-index: 888;
+        padding: 1.5rem 0px;
+        margin: 0;
+    }
+    .navbar li {
+        margin: 0.4rem 0;
+    }
+    .navbar li a {
+        color: #fff;
+    }
+    .navbar a#pull {
+        display: block;
+        position: relative;
+    }
+    .navbar a#pull:after {
+        content: "";
+        background-image: url('../images/nav-smart-icon.png');
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        display: block;
+        float: right;
+        opacity: .7;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    .navbar li {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+}
