@@ -261,11 +261,9 @@
             $.ajax({
                 type: "GET",
                 url: "./index.html",
-                data: form_data,
-                success: function () {
-                    alert("Ваше сообщение отправлено!");
-                }
+                data: form_data
             });
+            $(this).closest('form').get(0).reset();
         });
     </script>
 
