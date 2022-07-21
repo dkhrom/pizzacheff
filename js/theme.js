@@ -80,3 +80,30 @@ window.addEventListener("DOMContentLoaded", function () {
 
     });
 });
+
+
+// CTA Form - Modal Success
+$(document).ready(function ($) {
+    $('.submit_btn').click(function () {
+        $('.modal').fadeIn();
+        return false;
+    });
+
+    $('.popup-close').click(function () {
+        $(this).parents('.modal').fadeOut();
+        return false;
+    });
+
+    $(document).keydown(function (e) {
+        if (e.keyCode === 27) {
+            e.stopPropagation();
+            $('.modal').fadeOut();
+        }
+    });
+
+    $('.modal').click(function (e) {
+        if ($(e.target).closest('.popup-content').length == 0) {
+            $(this).fadeOut();
+        }
+    });
+});
